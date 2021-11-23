@@ -4,11 +4,10 @@ for entry in /usr/bin/* /bin/*
 do
   if [ -f "$entry" ];then
     filename=$(basename "$entry")
-    #echo "$entry"
     echo @echo off > "$windowsPath""$filename".cmd
-    echo wsl -c \""$filename" %*\" >> "$windowsPath""$filename".cmd
+    echo wsl "$filename" %* >> "$windowsPath""$filename".cmd
     if [[ ( $filename == "apt-get" ) || (  $filename == "apt" ) || ( $filename == "npm" ) ||  ( $filename == "yarn" ) ]];then
-      echo wsl -c \"windowsBash\" >> "$windowsPath""$filename".cmd
+      echo wsl windowsBash >> "$windowsPath""$filename".cmd
     fi
   fi
 done
