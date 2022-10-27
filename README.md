@@ -7,7 +7,7 @@ How to install
 
 Run the following command inside the **shell** of your **distro** to **generate shortcuts** for commands
 ```sh
-wget https://raw.githubusercontent.com/ajratnam/windowsBash/master/windowsBash -P /usr/bin && sudo chmod 0777 /usr/bin/windowsBash && windowsBash
+sudo su -c 'wget https://raw.githubusercontent.com/ajratnam/windowsBash/master/windowsBash -P /usr/bin && chmod 0777 /usr/bin/windowsBash && windowsBash'
 ```
 
 **Then add this directory to your path in Windows**
